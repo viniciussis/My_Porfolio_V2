@@ -17,7 +17,7 @@
   padding: 3rem;
 }
 .footer__para{
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   text-align: center;
 }
 </style>

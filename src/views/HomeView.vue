@@ -71,6 +71,9 @@ import { Icon } from '@iconify/vue';
       gap: 0.25rem;
       align-items: center;
 
+      &:hover{
+        transform: scale(1.1);
+      }
       .home__icon {
         transition: 0.5s;
       }
