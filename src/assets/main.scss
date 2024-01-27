@@ -1,0 +1,25 @@
+@import './base.scss';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: 'Poppins', sans-serif;
+  color: var(--light);
+  transition: 0.5s;
+}
+
+.sectionTitle {
+  text-transform: uppercase;
+  color: var(--green);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--dark-black) inset !important;
+  -webkit-text-fill-color: white !important;
+}

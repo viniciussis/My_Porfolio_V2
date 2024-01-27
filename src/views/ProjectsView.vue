@@ -2,13 +2,13 @@
 </script>
 
 <template>
-  <main class="about">
-    <h2 class="sectionTitle">about me</h2>
+  <main class="projects">
+    <h2 class="sectionTitle">Projects</h2>
   </main>
 </template>
 
 <style scoped>
-.about{
+.projects {
   padding: 2.5rem 0;
   display: flex;
   flex-direction: column;

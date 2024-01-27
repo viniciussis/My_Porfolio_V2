@@ -14,9 +14,10 @@
   align-items: center;
   width: 100%;
   height: 5rem;
-
+  padding: 3rem;
 }
 .footer__para{
   font-size: 1.15rem;
+  text-align: center;
 }
 </style>

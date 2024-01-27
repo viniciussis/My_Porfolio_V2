@@ -6,7 +6,7 @@ import { RouterLink } from 'vue-router';
 <template>
   <header class="topBar">
     <a class="topBar__home" href="/"><img src="../assets/Brand/PNG/Logo sm white png.png" alt="logo devinicius"></a>
-    <nav >
+    <nav>
       <ul class="topBar__navigator">
         <li class="topBar__link">
           <RouterLink to="/about">About</RouterLink>
@@ -25,8 +25,8 @@ import { RouterLink } from 'vue-router';
   </header>
 </template>
 
-<style scoped>
-.topBar{ 
+<style lang="scss" scoped>
+.topBar {
   position: sticky;
   top: 0;
   z-index: 30;
@@ -38,17 +38,24 @@ import { RouterLink } from 'vue-router';
   padding: 2rem 5rem;
   border-bottom: 1px solid var(--dark-gray);
   background-color: var(--dark-black-opaque);
-}
-.topBar__home{
-  display: flex;
-}
-.topBar__navigator{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 1.5rem;
-}
-.topBar__link{
-  font-size: 1.25rem;
+
+  .topBar__home {
+    display: flex;
+  }
+
+  .topBar__navigator {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+
+    .topBar__link {
+      font-size: 1.25rem;
+    }
+
+    .topBar__link:hover a{
+      color: var(--green);
+    }
+  }
 }
 </style>
