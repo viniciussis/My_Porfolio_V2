@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import SkillBar from '../components/SkillBar.vue';
+import SkillCircle from '@/components/SkillCircle.vue';
+import Galleria from 'primevue/galleria';
+
 const stackSkills = ref([
   {
     id: 1,
@@ -58,6 +61,18 @@ const stackSkills = ref([
     percent: "90"
   }
 ])
+const softSkills = ref([
+  { id: 1, name: 'Communication' },
+  { id: 2, name: 'Problem Solving' },
+  { id: 3, name: 'Teamwork' },
+  { id: 4, name: 'Adaptability' },
+  { id: 5, name: 'Initiative' },
+  { id: 6, name: 'Time Management' },
+  { id: 7, name: 'Continuous Learning' },
+  { id: 8, name: 'Attention to Detail' },
+  { id: 9, name: 'Critical Thinking' },
+  { id: 10, name: 'Leadership' },
+]);
 </script>
 
 <template>
@@ -65,9 +80,17 @@ const stackSkills = ref([
     <h2 class="sectionTitle">stack</h2>
     <h3 class="skills__subtitle">Delve into the technologies I master in full-stack development!</h3>
     <section class="skills__stack">
-      <SkillBar v-bind:key="skill.id" v-for="skill in stackSkills" :name="skill.name" :percent="skill.percent"/>
+      <SkillBar v-bind:key="skill.id" v-for="skill in stackSkills" :name="skill.name" :percent="skill.percent" />
     </section>
     <h2 class="sectionTitle">soft skills</h2>
+    <h3 class="skills__subtitle">Soft skills that I consider crucial and am constantly refining.</h3>
+    <section class="skills__softSkills">
+      <SkillCircle v-for="skill in softSkills" v-bind:key="skill.id" :name="skill.name"/>
+    </section>
+    <h2 class="sectionTitle">certificates</h2>
+    <section class="skills_certificates">
+
+    </section>
   </main>
 </template>
 
@@ -79,17 +102,29 @@ const stackSkills = ref([
   gap: 2rem;
   justify-content: center;
   align-items: center;
-  .skills__subtitle{
+
+  .skills__subtitle {
     font-size: 1.75rem;
     font-weight: 700;
   }
-  .skills__stack{
+
+  .skills__stack {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
     padding: 0 5rem;
     justify-items: center;
     margin-bottom: 2rem;
+  }
+
+  .skills__softSkills {
+    position: relative;
+    display: flex;
+    padding: 0 5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
   }
 }
 </style>
