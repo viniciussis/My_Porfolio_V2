@@ -2,63 +2,73 @@
 import { ref } from 'vue';
 import SkillBar from '../components/SkillBar.vue';
 import SkillCircle from '@/components/SkillCircle.vue';
-import Galleria from 'primevue/galleria';
 
 const stackSkills = ref([
   {
     id: 1,
     name: "Typescript",
-    percent: "50"
+    percent: "60",
+    level: "intermediate"
   },
   {
     id: 2,
     name: "Javascript",
-    percent: "90"
+    percent: "90",
+    level: "advanced"
   },
   {
     id: 3,
     name: "Vue",
-    percent: "90"
+    percent: "90",
+    level: "advanced"
   },
   {
     id: 4,
     name: "Java",
-    percent: "75"
+    percent: "60",
+    level: "intermediate"
   },
   {
     id: 5,
     name: "Node",
-    percent: "75"
+    percent: "60",
+    level: "intermediate"
   },
   {
     id: 6,
     name: "MySQL",
-    percent: "75"
+    percent: "90",
+    level: "advanced"
   },
   {
     id: 7,
     name: "MongoDB",
-    percent: "50"
+    percent: "60",
+    level: "intermediate"
   },
   {
     id: 8,
     name: "PostgreSQL",
-    percent: "90"
+    percent: "90",
+    level: "advanced"
   },
   {
     id: 9,
     name: "React",
-    percent: "90"
+    percent: "90",
+    level: "advanced"
   },
   {
     id: 10,
     name: "Python",
-    percent: "25"
+    percent: "25",
+    level: "beginner"
   },
   {
     id: 11,
     name: "SASS",
-    percent: "90"
+    percent: "90",
+    level: "advanced"
   }
 ])
 const softSkills = ref([
@@ -80,7 +90,7 @@ const softSkills = ref([
     <h2 class="sectionTitle">stack</h2>
     <h3 class="skills__subtitle">Delve into the technologies I master in full-stack development!</h3>
     <section class="skills__stack">
-      <SkillBar v-bind:key="skill.id" v-for="skill in stackSkills" :name="skill.name" :percent="skill.percent" />
+      <SkillBar :level="skill.level" v-bind:key="skill.id" v-for="skill in stackSkills" :name="skill.name" :percent="skill.percent" />
     </section>
     <h2 class="sectionTitle">soft skills</h2>
     <h3 class="skills__subtitle">Soft skills that I consider crucial and am constantly refining.</h3>
@@ -89,7 +99,7 @@ const softSkills = ref([
     </section>
     <h2 class="sectionTitle">certificates</h2>
     <section class="skills_certificates">
-
+      <ImageSlider/>
     </section>
   </main>
 </template>
@@ -125,6 +135,13 @@ const softSkills = ref([
     align-items: center;
     gap: 0.75rem;
     flex-wrap: wrap;
+  }
+
+  .skills_certificates{
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+    display: flex;
   }
 }
 </style>
