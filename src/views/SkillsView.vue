@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import SkillBar from '../components/SkillBar.vue';
-import SkillCircle from '@/components/SkillCircle.vue';
+import SkillCircle from '../components/SkillCircle.vue';
 
 const stackSkills = ref([
   {

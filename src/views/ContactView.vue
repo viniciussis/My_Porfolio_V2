@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import FormField from '@/components/FormField.vue';
-import TextArea from '@/components/TextArea.vue';
+import FormField from '../components/FormField.vue'
+import TextArea from '../components/TextArea.vue';
 import { Icon } from '@iconify/vue/dist/iconify.js';
 
 </script>
