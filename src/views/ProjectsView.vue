@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
@@ -7,7 +8,7 @@
     <div class="projects__container">
       <div class="container__card">
         <div class="card__img">
-          <img class="img" src="" alt="kkk">
+          <img class="img" src="../assets/projects/CookinUp.png" alt="kkk">
         </div>
         <div class="card__content">
           <h2 class="content__title">Title</h2>
@@ -29,7 +30,7 @@
       </div>
       <div class="container__card">
         <div class="card__img">
-          <img class="img" src="" alt="kkk">
+          <img class="img" src="../assets/projects/Virtual-Space.png" alt="kkk">
         </div>
         <div class="card__content">
           <h2 class="content__title">Title</h2>
