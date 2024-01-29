@@ -5,11 +5,14 @@
   <main class="about">
     <h2 class="sectionTitle">about me</h2>
     <section class="about__myself">
-      <div>
-        <h3 class="about__subtitle">Hi! I'm Vinícius Santos</h3>
-        <p class="about__para">I'm a software developer passionate about programming and web development committed to
+      <div class="myself__container">
+        <h3 class="container__subtitle">Hey! I'm Vinícius Silva Santos!</h3>
+        <p class="about__para">
+          <img class='para__img' src='../assets/profile/Profile06.jpg' alt="profile" aria-hidden="true" />
+          I'm a software developer passionate about programming and web development committed to
           driving innovation and
-          excellence in every project I engage in.</p>
+          excellence in every project I engage in.
+        </p>
         <p class="about__para">My educational journey led me to study at one of the best teaching colleges in Bahia, IFBA,
           and also at the
           largest online technology school in Brazil, Alura. I am constantly seeking new challenges and opportunities to
@@ -21,9 +24,6 @@
           MySQL, MongoDB, and PostgreSQL. I believe that teamwork is the key to success, and I take pride in collaborating
           with colleagues to achieve exceptional results.
         </p>
-      </div>
-      <div class="about__images">
-        <img class='about__prof' src='../assets/profile/Profile06.jpg' alt="profile" aria-hidden="true" />
       </div>
     </section>
     <h2 class="sectionTitle">education</h2>
@@ -93,46 +93,47 @@
 
   .about__myself {
     padding: 0 5rem;
-    display: grid;
-    grid-template-columns: 5fr 3fr;
-    gap: 2rem;
 
-    .about__images {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      .about__prof {
-        z-index: 1;
-        width: 25vw;
-        border-radius: 50%;
-      }
+    .para__img {
+      border-radius: 10%;
+      float: left;
+      margin-right: 1.5rem;
+      max-width: 20rem;
+      height: auto;
     }
 
-    .about__subtitle {
+    .container__subtitle {
       font-size: 2rem;
       font-weight: 700;
       color: var(--color-text);
       margin-bottom: 1rem;
+    }
+
+    @media screen and (max-width:700px) {
+      padding: 0 2.5rem;
+
+      .para__img {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 1rem;
+      }
+
+      .container__subtitle {
+        text-align: center;
+      }
     }
   }
 
   .about__hobbies {
     padding: 0 8rem;
 
-  }
+    @media screen and (min-width: 500px) and (max-width:900px) {
+      padding: 0 5rem;
+    }
 
-  .about__para {
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    text-align: justify;
-
-    strong {
-      color: var(--color-heading);
-      font-weight: 700;
-      font-size: 1.35rem;
+    @media screen and (max-width:500px) {
+      padding: 0 2.5rem;
     }
   }
 
@@ -240,7 +241,7 @@
       }
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 800px) {
       .timeline::after {
         left: 31px;
       }
@@ -268,5 +269,26 @@
       }
     }
   }
+
+  .about__para {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    text-align: justify;
+
+    strong {
+      color: var(--color-heading);
+      font-weight: 700;
+      font-size: 1.35rem;
+    }
+
+    @media screen and (max-width:500px) {
+      font-size: 1rem;
+      strong{
+        font-size: 1.15rem;
+      }
+    }
+  }
+
 }
 </style>

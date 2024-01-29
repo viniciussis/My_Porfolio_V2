@@ -1,4 +1,5 @@
 import './assets/main.scss'
+import * as dotenv from 'dotenv'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -11,3 +12,4 @@ app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
+dotenv.config()

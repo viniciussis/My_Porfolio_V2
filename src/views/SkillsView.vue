@@ -5,46 +5,10 @@ import SkillCircle from '../components/SkillCircle.vue';
 
 const stackSkills = ref([
   {
-    id: 1,
-    name: "Typescript",
-    percent: "60",
-    level: "intermediate"
-  },
-  {
-    id: 2,
-    name: "Javascript",
-    percent: "90",
-    level: "advanced"
-  },
-  {
-    id: 3,
-    name: "Vue",
-    percent: "90",
-    level: "advanced"
-  },
-  {
-    id: 4,
-    name: "Java",
-    percent: "60",
-    level: "intermediate"
-  },
-  {
-    id: 5,
-    name: "Node",
-    percent: "60",
-    level: "intermediate"
-  },
-  {
     id: 6,
     name: "MySQL",
     percent: "90",
     level: "advanced"
-  },
-  {
-    id: 7,
-    name: "MongoDB",
-    percent: "60",
-    level: "intermediate"
   },
   {
     id: 8,
@@ -59,17 +23,53 @@ const stackSkills = ref([
     level: "advanced"
   },
   {
+    id: 2,
+    name: "Javascript",
+    percent: "90",
+    level: "advanced"
+  },
+  {
+    id: 3,
+    name: "Vue",
+    percent: "90",
+    level: "advanced"
+  },
+  {
+    id: 11,
+    name: "html, css  & Sass",
+    percent: "90",
+    level: "advanced"
+  },
+  {
+    id: 4,
+    name: "Java",
+    percent: "60",
+    level: "intermediate"
+  },
+  {
+    id: 1,
+    name: "Typescript",
+    percent: "60",
+    level: "intermediate"
+  },
+  {
+    id: 5,
+    name: "Node",
+    percent: "60",
+    level: "intermediate"
+  },
+  {
+    id: 7,
+    name: "MongoDB",
+    percent: "60",
+    level: "intermediate"
+  },
+  {
     id: 10,
     name: "Python",
     percent: "25",
     level: "beginner"
   },
-  {
-    id: 11,
-    name: "SASS",
-    percent: "90",
-    level: "advanced"
-  }
 ])
 const softSkills = ref([
   { id: 1, name: 'Communication' },
@@ -90,16 +90,16 @@ const softSkills = ref([
     <h2 class="sectionTitle">stack</h2>
     <h3 class="skills__subtitle">Delve into the technologies I master in full-stack development!</h3>
     <section class="skills__stack">
-      <SkillBar :level="skill.level" v-bind:key="skill.id" v-for="skill in stackSkills" :name="skill.name" :percent="skill.percent" />
+      <SkillBar :level="skill.level" v-bind:key="skill.id" v-for="skill in stackSkills" :name="skill.name"
+        :percent="skill.percent" />
     </section>
     <h2 class="sectionTitle">soft skills</h2>
     <h3 class="skills__subtitle">Soft skills that I consider crucial and am constantly refining.</h3>
     <section class="skills__softSkills">
-      <SkillCircle v-for="skill in softSkills" v-bind:key="skill.id" :name="skill.name"/>
+      <SkillCircle v-for="skill in softSkills" v-bind:key="skill.id" :name="skill.name" />
     </section>
     <h2 class="sectionTitle">certificates</h2>
     <section class="skills_certificates">
-      <ImageSlider/>
     </section>
   </main>
 </template>
@@ -137,7 +137,7 @@ const softSkills = ref([
     flex-wrap: wrap;
   }
 
-  .skills_certificates{
+  .skills_certificates {
     justify-content: center;
     align-items: center;
     padding: 0 5rem;

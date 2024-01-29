@@ -17,7 +17,10 @@ defineProps({
 
 <template>
   <div class="skillBar">
-    <div class="skillBar__name">{{ name }}</div>
+    <div class="skillBar__name">
+      <p>{{ name }}</p>
+      <p class="name__level">{{ level }}</p>
+    </div>
     <div class="skillBar__bar">
       <div class="skillBar__percentage" :style="{width: `${percent}%`, animation: `${level} 3s`}">
       </div>
@@ -34,7 +37,14 @@ defineProps({
     font-size: 1.25rem;
     text-transform: capitalize;
     font-weight: 700;
+    display: flex;
+    justify-content: space-between;
     color: var(--color-text);
+
+    .name__level {
+      color: var(--green);
+      font-weight: 700;
+    }
   }
 
   .skillBar__bar {

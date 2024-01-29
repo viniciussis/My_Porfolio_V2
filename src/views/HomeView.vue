@@ -32,17 +32,18 @@ import { Icon } from '@iconify/vue';
   margin: 4.25rem 0;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.65rem;
   justify-content: center;
   align-items: center;
 
   .home__content {
-    max-width: 60%;
+    max-width: 64%;
 
     .home__title {
       color: var(--color-text);
       font-size: 5rem;
       font-weight: 700;
+
     }
 
     .home__subtitle {
@@ -54,12 +55,49 @@ import { Icon } from '@iconify/vue';
     .home__para {
       margin-top: 1rem;
       font-size: 1.2rem;
+      text-align: justify;
     }
+
+    @media screen and (max-width: 500px) {
+      max-width: 75%;
+
+      .home__title{
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      .home__subtitle{
+        text-align: center;
+        font-size: 1.5rem;
+      }
+
+      .home__para{
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+    
+
+    @media screen and (min-width: 500px) and (max-width: 700px) {
+      max-width: 75%;
+
+      .home__title{
+        font-size: 4rem;
+        text-align: center;
+      }
+
+      .home__subtitle{
+        text-align: center;
+      }
+    }
+
   }
 
   .home__links {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     gap: 1.25rem;
+    align-content: center;
 
     .home__link {
       font-size: 1.25rem;
@@ -70,10 +108,30 @@ import { Icon } from '@iconify/vue';
       display: flex;
       gap: 0.25rem;
       align-items: center;
+      justify-content: center;
 
-      &:hover{
+      @media screen and (min-width: 1365px) {
+        grid-column: span 3;
+      }
+
+      @media screen and (min-width: 700px) and (max-width:1365px) {
+        grid-column: span 6;
+      }
+
+      @media screen and (min-width: 540px) and (max-width: 700px) {
+        grid-column: span 6;
+        padding: 0.55rem 1.75rem;
+      }
+
+      @media screen and (max-width: 540px) {
+        grid-column: span 12;
+        padding: 0.55rem 4rem;
+      }
+
+      &:hover {
         transform: scale(1.1);
       }
+
       .home__icon {
         transition: 0.5s;
       }

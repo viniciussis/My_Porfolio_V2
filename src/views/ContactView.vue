@@ -2,6 +2,27 @@
 import FormField from '../components/FormField.vue'
 import TextArea from '../components/TextArea.vue';
 import { Icon } from '@iconify/vue/dist/iconify.js';
+import emailjs from '@emailjs/browser'
+import { ref } from 'vue';
+
+const serviceID: string = process.env.SERVICE_ID || '';
+const templateID: string = process.env.TEMPLATE_ID || '';
+const publicKey: string = process.env.PUBLIC_KEY || '';
+
+const name = ref('')
+const email = ref('')
+const subject = ref('')
+const message = ref('')
+
+const sendEmail = (e: Event) => {
+  e.preventDefault();
+  emailjs.send(
+    serviceID,
+    templateID,
+    { name, email, subject, message },
+    publicKey
+  )
+}
 
 </script>
 
@@ -9,7 +30,7 @@ import { Icon } from '@iconify/vue/dist/iconify.js';
   <main class="contact">
     <h2 class="sectionTitle">contact me</h2>
     <div class="contact__container">
-      <form class="contact__form" autocomplete="off" action="">
+      <form ref="form" class="contact__form" autocomplete="off" @submit.prevent="sendEmail">
         <FormField required label="Name" />
         <FormField required label="Email" type="email" />
         <FormField required label="Subject" />
@@ -75,7 +96,8 @@ import { Icon } from '@iconify/vue/dist/iconify.js';
         font-weight: 700;
         cursor: pointer;
         transition: 1s;
-        &:hover{
+
+        &:hover {
           transform: scale(1.1);
           background-color: var(--green);
         }
@@ -84,6 +106,7 @@ import { Icon } from '@iconify/vue/dist/iconify.js';
 
     .contact__social {
       padding: 0 2rem;
+
       .contact__subtitle {
         color: var(--green);
         font-size: 2rem;
@@ -95,23 +118,25 @@ import { Icon } from '@iconify/vue/dist/iconify.js';
         font-size: 1.15rem;
       }
 
-      .contact__link{
+      .contact__link {
         display: flex;
         align-items: center;
         gap: 0.5rem;
         font-size: 1.15rem;
-        .contact__icon{
+
+        .contact__icon {
           transition: 0.5s;
         }
       }
+
       .contact__link:hover .contact__icon {
         color: var(--green);
       }
     }
   }
 
-  @media screen and (max-width: 1050px){
-    .contact__container{
+  @media screen and (max-width: 1050px) {
+    .contact__container {
       flex-direction: column;
       justify-content: center;
       align-items: center;

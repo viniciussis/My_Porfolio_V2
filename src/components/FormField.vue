@@ -33,7 +33,6 @@ defineProps({
     top: 0;
     padding: calc(0.5rem * 0.75) calc(1.5rem * .5);
     margin: calc(0.5rem * 0.75 + 3px) calc(1.5rem * .5);
-    white-space: nowrap;
     transform: translate(0, 0);
     transform-origin: 0 0;
     background-color: var(--color-background);
