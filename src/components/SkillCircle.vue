@@ -20,7 +20,7 @@ defineProps({
   width: 10rem;
   height: 10rem;
   float: left;
-  margin: 1rem;
+  margin: 1rem 0;
 
   .skill__name {
     text-align: center;
@@ -49,6 +49,15 @@ defineProps({
 
   &:active .skill__circle {
     animation: spin 2s linear infinite;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 7rem;
+    height: 7rem;
+
+    .skill__name {
+      font-size: 0.75rem;
+    }
   }
 }
 

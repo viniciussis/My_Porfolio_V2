@@ -59,7 +59,7 @@
   padding: 2.5rem 0;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2rem 0;
   justify-content: center;
   margin: 0 4rem;
   align-items: center;
@@ -77,17 +77,17 @@
       background-color: var(--dark-gray);
       border-radius: 1rem;
 
-      @media (min-width: 950px) {
+      @media screen and (min-width: 1230px) and (max-width: 1500px) {
         grid-column: span 6;
       }
 
-      @media (min-width: 1500px) {
+      @media screen and (min-width: 1500px){
         grid-column: span 4;
       }
 
       .card__img {
         position: relative;
-        height: 300px;
+        height: auto;
         overflow: hidden;
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
@@ -95,7 +95,6 @@
 
         .img {
           width: 100%;
-          height: auto;
           border-top-left-radius: 1rem;
           border-top-right-radius: 1rem;
           object-fit: cover;
@@ -170,14 +169,6 @@
           }
         }
       }
-    }
-
-    @media (min-width: 768px) {
-      gap: 12px;
-    }
-
-    @media (min-width: 576px) {
-      padding: 0 16px;
     }
   }
 }

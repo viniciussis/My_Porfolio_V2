@@ -17,6 +17,10 @@ a {
   color: var(--green);
   font-size: 3rem;
   font-weight: 700;
+
+  @media screen and (max-width:550px){
+    font-size: 2.5rem;
+  }
 }
 
 input:-webkit-autofill {

@@ -30,6 +30,7 @@ defineProps({
 
 <style lang="scss">
 .skillBar {
+  grid-column: span 12;
   max-width: 30rem;
   width: 100%;
 
@@ -44,6 +45,14 @@ defineProps({
     .name__level {
       color: var(--green);
       font-weight: 700;
+    }
+
+    @media screen and (max-width:500px) {
+      font-size: 1rem;
+
+      .name__level{
+        font-size: 1rem;
+      }
     }
   }
 
@@ -88,6 +97,18 @@ defineProps({
         width: 25%;
       }
     }
+  }
+
+  @media screen and (min-width: 2200px){
+    grid-column: span 3;
+  }
+
+  @media screen and (min-width: 1675px) and (max-width: 2200px){
+    grid-column: span 4;
+  }
+
+  @media screen and (min-width: 1150px) and (max-width: 1675px){
+    grid-column: span 6;
   }
 }
 </style>

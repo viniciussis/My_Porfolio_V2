@@ -90,7 +90,7 @@ const softSkills = ref([
     <h2 class="sectionTitle">stack</h2>
     <h3 class="skills__subtitle">Delve into the technologies I master in full-stack development!</h3>
     <section class="skills__stack">
-      <SkillBar :level="skill.level" v-bind:key="skill.id" v-for="skill in stackSkills" :name="skill.name"
+      <SkillBar class="stack__skillbar" :level="skill.level" v-bind:key="skill.id" v-for="skill in stackSkills" :name="skill.name"
         :percent="skill.percent" />
     </section>
     <h2 class="sectionTitle">soft skills</h2>
@@ -106,7 +106,7 @@ const softSkills = ref([
 
 <style lang="scss" scoped>
 .skills {
-  padding: 2.5rem 0;
+  padding: 2.5rem 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -115,14 +115,14 @@ const softSkills = ref([
 
   .skills__subtitle {
     font-size: 1.75rem;
+    text-align: center;
     font-weight: 700;
   }
 
   .skills__stack {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(12, 1fr);
     width: 100%;
-    padding: 0 5rem;
     justify-items: center;
     margin-bottom: 2rem;
   }
@@ -130,7 +130,6 @@ const softSkills = ref([
   .skills__softSkills {
     position: relative;
     display: flex;
-    padding: 0 5rem;
     justify-content: center;
     align-items: center;
     gap: 0.75rem;
@@ -140,8 +139,15 @@ const softSkills = ref([
   .skills_certificates {
     justify-content: center;
     align-items: center;
-    padding: 0 5rem;
     display: flex;
+  }
+
+  @media screen and (max-width: 550px) {
+    padding: 2.5rem 2rem;
+
+    .skills__subtitle{
+      font-size: 1.25rem;
+    }
   }
 }
 </style>
