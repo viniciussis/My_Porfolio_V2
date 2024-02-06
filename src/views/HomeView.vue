@@ -11,16 +11,16 @@ import { Icon } from '@iconify/vue';
         across various domains, with a focus on building responsive, accessible, and inclusive digital experiences.</p>
     </div>
     <div class="home__links">
-      <a class="home__link" href="">
+      <a class="home__link" href="https://github.com/viniciussis" target="_blank">
         <Icon class="home__icon" icon="mdi:github" width="1.5rem" height="1.5rem" />GitHub
       </a>
-      <a class="home__link" href="">
+      <a class="home__link" href="https://www.linkedin.com/in/viniciussis/" target="_blank">
         <Icon class="home__icon" icon="mingcute:linkedin-fill" width="1.5rem" height="1.5rem" />LinkedIn
       </a>
-      <a class="home__link" href="">
+      <a class="home__link" href="https://www.instagram.com/_devinicius/" target="_blank">
         <Icon class="home__icon" icon="lets-icons:insta-fill" width="1.5rem" height="1.5rem" />Instagram
       </a>
-      <a class="home__link" href="">
+      <a class="home__link" href="https://twitter.com/_devinicius" target="_blank">
         <Icon class="home__icon" icon="ri:twitter-x-fill" width="1.5rem" height="1.5rem" />Twitter
       </a>
     </div>

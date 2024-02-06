@@ -3,7 +3,7 @@
 
 <template>
   <footer class="footer">
-    <p class="footer__para">© Copyright | Project for web portfolio created by Vinícius Silva Santos | 2024</p>
+    <p class="footer__para">&copy; Copyright | Project for web portfolio created by Vinícius Silva Santos | 2024</p>
   </footer>
 </template>
 

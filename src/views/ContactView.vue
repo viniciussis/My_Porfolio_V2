@@ -5,9 +5,9 @@ import { Icon } from '@iconify/vue/dist/iconify.js';
 import emailjs from '@emailjs/browser'
 import { ref } from 'vue';
 
-const serviceID: string = process.env.SERVICE_ID || '';
-const templateID: string = process.env.TEMPLATE_ID || '';
-const publicKey: string = process.env.PUBLIC_KEY || '';
+const serviceID = "service_2ebhax7";
+const templateID = "template_0rttn6e";
+const publicKey = "XkNMkZdJ0QrfOEExo";
 
 const name = ref('')
 const email = ref('')

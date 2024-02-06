@@ -100,6 +100,7 @@ const softSkills = ref([
     </section>
     <h2 class="sectionTitle">certificates</h2>
     <section class="skills_certificates">
+      
     </section>
   </main>
 </template>
