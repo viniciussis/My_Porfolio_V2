@@ -22,6 +22,15 @@ const sendEmail = (e: Event) => {
     { name, email, subject, message },
     publicKey
   )
+  clearFormFields()
+}
+
+const clearFormFields = () => {
+  console.log("clearing form fields")
+  name.value = ''
+  email.value = ''
+  subject.value = ''
+  message.value = ''
 }
 
 </script>
