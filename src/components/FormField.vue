@@ -56,6 +56,7 @@ defineProps({
     &:focus,
     &:not(:placeholder-shown) {
       border-color: var(--green);
+
       &+.input__label {
         transform: translate(.25rem, -65%) scale(.9);
         color: var(--green);
